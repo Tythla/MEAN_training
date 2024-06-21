@@ -1,0 +1,7 @@
+<div class="grid-container">
+  <div *ngFor="let item of data; let i = index" class="grid-item" [ngStyle]="{'box-shadow': getBoxShadow(i)}">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+    <button [style.backgroundColor]="item.color" (click)="changeColor(item.color, i)">Check this out</button>
+  </div>
+</div>
