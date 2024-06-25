@@ -1,0 +1,6 @@
+<div>
+  <input type="text" [(ngModel)]="cityInput" (input)="onInputChange()" placeholder="Enter city name" />
+  <ul *ngIf="cityInput">
+    <li *ngFor="let city of filteredCities" (click)="onCityClick(city)">{{ city }}</li>
+  </ul>
+</div>
