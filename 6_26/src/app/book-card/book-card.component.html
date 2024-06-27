@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-image">
+    <img *ngIf="book.volumeInfo.imageLinks" [src]="book.volumeInfo.imageLinks.thumbnail" alt="{{ book.volumeInfo.title }}">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ book.volumeInfo.title }}</h5>
+    <p class="card-text" *ngIf="book.volumeInfo.publisher">Publisher: {{ book.volumeInfo.publisher }}</p>
+    <p class="card-text" *ngIf="book.volumeInfo.publishedDate">Published Date: {{ book.volumeInfo.publishedDate }}</p>
+    <p class="card-text" *ngIf="book.volumeInfo.description">Description: {{ book.volumeInfo.description }}</p>
+  </div>
+</div>
