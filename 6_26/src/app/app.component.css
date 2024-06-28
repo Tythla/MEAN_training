@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+}
+
+.wishlist {
+  width: 600px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+}

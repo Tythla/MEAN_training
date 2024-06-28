@@ -1,0 +1,9 @@
+<div class="wishlist">
+  <h3>Wishlist</h3>
+  <ul>
+    <li *ngFor="let book of wishlist$ | async">
+      {{ book.volumeInfo.title }}
+      <button (click)="removeFromWishlist(book.id)">Delete</button>
+    </li>
+  </ul>
+</div>

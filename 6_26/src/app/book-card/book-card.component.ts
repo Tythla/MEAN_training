@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { WishlistService } from '../wishlist.service';
 
 @Component({
   selector: 'app-book-card',
@@ -10,4 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class BookCardComponent {
   @Input() book: any;
+
+  constructor(private wishlistService: WishlistService) {}
+
+  addToWishlist() {
+    this.wishlistService.addToWishlist(this.book);
+  }
 }

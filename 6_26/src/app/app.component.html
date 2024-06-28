@@ -1,1 +1,5 @@
-<app-search-books></app-search-books>
+    <app-navbar></app-navbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+      <app-wishlist *ngIf="showSideWishlist()" class="wishlist"></app-wishlist>
+    </div>

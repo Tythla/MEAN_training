@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" (click)="addToWishlist()">
   <div class="card-image">
     <img *ngIf="book.volumeInfo.imageLinks" [src]="book.volumeInfo.imageLinks.thumbnail" alt="{{ book.volumeInfo.title }}">
   </div>
